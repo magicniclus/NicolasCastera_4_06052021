@@ -23,10 +23,10 @@ function launchModal() {
 
 // close modal event
 
-// closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
+closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
 // // close modal event
 
-// function closeModal() {
-//   modalbg.style.display = "none";
-// }
+function closeModal() {
+  modalbg.style.display = "none";
+}
