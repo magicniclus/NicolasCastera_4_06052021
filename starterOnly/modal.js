@@ -12,6 +12,7 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelectorAll(".close");
+const enterPrenom = document.getElementsByClassName ('penom');
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -25,8 +26,11 @@ function launchModal() {
 
 closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
-// // close modal event
+// close modal event
 
 function closeModal() {
   modalbg.style.display = "none";
 }
+
+// Penom
+
