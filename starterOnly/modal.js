@@ -32,5 +32,21 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
-// Penom
+//Prenom
+
+let myForm = document.getElementsByClassName('form');
+
+myForm.addEventListener('submit', function(e){
+  let firstName = document.getElementById('first');
+  let errorMessage = document.getElementsByClassName('error');
+  if(firstName.value===' '){
+    e.preventDefault();
+    errorMessage.innerText="Entrez un pseudo valide";
+  }else{
+    e.returnValue();
+  }
+})
+
+
+
 
