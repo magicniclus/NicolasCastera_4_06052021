@@ -45,7 +45,7 @@ function validateFirst () {
   if(first.value.trim() === '' || first.value.trim() === ' ' || regexNameIs.test(first.value.trim()) === false){
     refutSetUpName (first);
     errorText.style.display='block';
-    errorText.innerText='Veuillez entrer votre prénom'
+    errorText.innerText='Veuillez saisir votre prénom'
     return false;
   }else{
     validateSetUpName(first);
@@ -75,7 +75,7 @@ function validateLast () {
   if(last.value.trim() === '' || last.value.trim() === ' ' || regexNameIs.test(last.value.trim()) === false){
     refutSetUpName (last);
     errorTextLast.style.display='block';
-    errorTextLast.innerText='Veuillez entrer votre nom'
+    errorTextLast.innerText='Veuillez saisir votre nom'
     return false;
   }else{
     validateSetUpName(last);
@@ -93,6 +93,37 @@ function refutSetUpName (refut) {
 }
 
 
+
+
+//Email
+
+function validateMail () {
+  let email =  document.getElementById('email');
+  let regexMail = /^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i;
+  let errorEmail = document.getElementById('error-email');
+
+  if(email.value.trim() === '' || email.value.trim() === ' ' || regexMail.test(email.value.trim()) === false){
+    refutSetUpName (email);
+    errorEmail.style.display='block';
+    errorEmail.innerText='Veuillez saisir un email valide'
+    return false;
+  }else{
+    validateSetUpName(email);
+    errorEmail.style.display='none';
+    return true;
+  }
+}
+
+function validateSetUpName (validate) {
+  validate.style.borderColor='green';
+}
+
+function refutSetUpName (refut) {
+  refut.style.borderColor='red';
+}
+
+
+
 //Validation formulaire
 
 let form = document.getElementById('form');
@@ -100,18 +131,20 @@ let form = document.getElementById('form');
 form.addEventListener('submit', e => {
     if (validateFirst() === false ){
         e.preventDefault();
-        alert('non');
     }else{
         e.preventDefault();
-        alert('oui');
     }
 
     if (validateLast() === false ){
       e.preventDefault();
-      alert('non 2')
     }else{
       e.preventDefault();
-      alert('oui2')
+    }
+
+    if (validateMail() === false ){
+      e.preventDefault();
+    }else{
+      e.preventDefault();
     }
 });
 

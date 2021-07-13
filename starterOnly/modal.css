@@ -531,7 +531,7 @@ footer {
 
 /* Prenom */
 
-#error, #error-last {
+#error, #error-last, #error-email {
   color: rgb(221, 59, 59);
   font-size: 0.5em;
 }
