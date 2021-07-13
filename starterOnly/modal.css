@@ -527,3 +527,12 @@ footer {
   }
 }
 
+/*--    Error    --*/
+
+/* Prenom */
+
+#error {
+  color: rgb(221, 59, 59);
+  font-size: 0.5em;
+}
+

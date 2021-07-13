@@ -40,12 +40,16 @@ function closeModal() {
 function validateFirst () {
   let first =  document.getElementById('first');
   let regexNameIs = /^[a-zA-Z]{2}/;
+  let errorText = document.getElementById('error');
 
-  if(first.value === '' || first.value === ' ' || regexNameIs.test(first.value) === false){
+  if(first.value.trim() === '' || first.value.trim() === ' ' || regexNameIs.test(first.value.trim()) === false){
     refutSetUpName (first);
+    errorText.style.display='block';
+    errorText.innerText='Veuillez entrer votre prénom'
     return false;
   }else{
     validateSetUpName(first);
+    errorText.style.display='none';
     return true;
   }
 }
@@ -57,6 +61,14 @@ function validateSetUpName (validate) {
 function refutSetUpName (refut) {
   refut.style.borderColor='red';
 }
+
+
+
+
+//Nom
+
+
+
 
 
 
