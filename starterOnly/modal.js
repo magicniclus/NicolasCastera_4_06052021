@@ -28,24 +28,52 @@ closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
 // close modal event
 
+
 function closeModal() {
   modalbg.style.display = "none";
 }
 
+
+
 //Prenom
 
-let myForm = document.getElementsByClassName('form');
+function validateFirst () {
+  let first =  document.getElementById('first');
+  let regexNameIs = /^[a-zA-Z]{2}/;
 
-myForm.addEventListener('submit', function(e){
-  let firstName = document.getElementById('first');
-  let errorMessage = document.getElementsByClassName('error');
-  if(firstName.value===' '){
-    e.preventDefault();
-    errorMessage.innerText="Entrez un pseudo valide";
+  if(first.value === '' || first.value === ' ' || regexNameIs.test(first.value) === false){
+    refutSetUpName (first);
+    return false;
   }else{
-    e.returnValue();
+    validateSetUpName(first);
+    return true;
   }
-})
+}
+
+function validateSetUpName (validate) {
+  validate.style.borderColor='green';
+}
+
+function refutSetUpName (refut) {
+  refut.style.borderColor='red';
+}
+
+
+
+//Validation formulaire
+
+let form = document.getElementById('form');
+
+form.addEventListener('submit', e => {
+    if (validateFirst() === false){
+        e.preventDefault();
+        alert('non');
+    }else{
+        e.preventDefault();
+        alert('oui');
+    }
+});
+
 
 
 
