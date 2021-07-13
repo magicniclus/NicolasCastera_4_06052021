@@ -67,9 +67,30 @@ function refutSetUpName (refut) {
 
 //Nom
 
+function validateLast () {
+  let last =  document.getElementById('last');
+  let regexNameIs = /^[a-zA-Z]{2}/;
+  let errorTextLast = document.getElementById('error-last');
 
+  if(last.value.trim() === '' || last.value.trim() === ' ' || regexNameIs.test(last.value.trim()) === false){
+    refutSetUpName (last);
+    errorTextLast.style.display='block';
+    errorTextLast.innerText='Veuillez entrer votre nom'
+    return false;
+  }else{
+    validateSetUpName(last);
+    errorTextLast.style.display='none';
+    return true;
+  }
+}
 
+function validateSetUpName (validate) {
+  validate.style.borderColor='green';
+}
 
+function refutSetUpName (refut) {
+  refut.style.borderColor='red';
+}
 
 
 //Validation formulaire
@@ -77,12 +98,20 @@ function refutSetUpName (refut) {
 let form = document.getElementById('form');
 
 form.addEventListener('submit', e => {
-    if (validateFirst() === false){
+    if (validateFirst() === false ){
         e.preventDefault();
         alert('non');
     }else{
         e.preventDefault();
         alert('oui');
+    }
+
+    if (validateLast() === false ){
+      e.preventDefault();
+      alert('non 2')
+    }else{
+      e.preventDefault();
+      alert('oui2')
     }
 });
 
