@@ -126,10 +126,26 @@ function refutSetUpName (refut) {
 
 //Date
 
-const birthdate = document.getElementById('birthdate');
-const today = new Date().toISOString().split("T")[0];
 
-birthdate.max = today;
+function validateDate () {
+  const birthdate = document.getElementById('birthdate');
+  const today = new Date().toISOString().split("T")[0];
+  let errorBirth = document.getElementById('error-birth');
+
+  console.log(birthdate.value);
+  birthdate.max = today;
+
+  if(birthdate.value.trim() === ''){
+    errorBirth.style.display='block';
+    errorBirth.innerText='Veuillez saisir votre date de naissance'
+    birthdate.style.borderColor='red';
+    return false;
+  }else{
+    errorBirth.style.display='none';
+    birthdate.style.borderColor='green';
+    return true;
+  }
+}
 
 //
 
@@ -158,7 +174,7 @@ form.addEventListener('submit', e => {
       e.preventDefault();
     }
 
-    if (validateBirth () === false ){
+    if (validateDate () === false ){
       e.preventDefault();
   }else{
       e.preventDefault();

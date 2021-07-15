@@ -531,11 +531,12 @@ footer {
 
 /* Prenom */
 
-#error, #error-last, #error-email, #birthdate span {
+#error, #error-last, #error-email {
   color: rgb(221, 59, 59);
   font-size: 0.5em;
 }
 
 #error-birth{
   color:rgb(221, 59, 59);
+  font-size: 0.5em;
 }
