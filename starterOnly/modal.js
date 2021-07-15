@@ -126,7 +126,10 @@ function refutSetUpName (refut) {
 
 //Date
 
+const birthdate = document.getElementById('birthdate');
+const today = new Date().toISOString().split("T")[0];
 
+birthdate.max = today;
 
 //
 
