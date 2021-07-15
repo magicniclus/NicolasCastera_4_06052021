@@ -124,6 +124,14 @@ function refutSetUpName (refut) {
 
 
 
+//Date
+
+
+
+//
+
+
+
 //Validation formulaire
 
 let form = document.getElementById('form');
@@ -146,6 +154,12 @@ form.addEventListener('submit', e => {
     }else{
       e.preventDefault();
     }
+
+    if (validateBirth () === false ){
+      e.preventDefault();
+  }else{
+      e.preventDefault();
+  }
 });
 
 
