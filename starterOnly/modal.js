@@ -145,7 +145,7 @@ function validateDate () {
   //   return true;
   // }
 
-  if(birthdate.value.trim() === '' || birthdate.date.value.trim() === ' '){
+  if(birthdate.value.trim() === ''){
     errorBirth.style.display='block';
     errorBirth.innerText='Veuillez saisir votre date de naissance';
     birthdate.style.borderColor='red';
