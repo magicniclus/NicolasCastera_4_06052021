@@ -102,10 +102,10 @@ function validateMail () {
   let regexMail = /^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i;
   let errorEmail = document.getElementById('error-email');
 
-  if(email.value.trim() === '' || email.value.trim() === ' ' || regexMail.test(email.value.trim()) === false){
+  if(regexMail.test(email.value.trim()) === false){
     refutSetUpName (email);
     errorEmail.style.display='block';
-    errorEmail.innerText='Veuillez saisir un email valide'
+    errorEmail.innerText='Veuillez saisir un email valide';
     return false;
   }else{
     validateSetUpName(email);
@@ -124,14 +124,26 @@ function refutSetUpName (refut) {
 
 
 
+
 //Date
 
 function validateDate () {
   const birthdate = document.getElementById('birthdate');
-  const today = new Date().toISOString().split("T")[0];
+  // const today = new Date().toISOString().split("T")[0]; //enlever
   let errorBirth = document.getElementById('error-birth');
 
-  birthdate.max = today;
+  // birthdate.max = today;
+
+  // if(birthdate.value.trim() === '' || birthdate.date.value.trim() === ' '){
+  //   errorBirth.style.display='block';
+  //   errorBirth.innerText='Veuillez saisir votre date de naissance';
+  //   birthdate.style.borderColor='red';
+  //   return false;
+  // }else{
+  //   errorBirth.style.display='none';
+  //   birthdate.style.borderColor='green';
+  //   return true;
+  // }
 
   if(birthdate.value.trim() === '' || birthdate.date.value.trim() === ' '){
     errorBirth.style.display='block';
