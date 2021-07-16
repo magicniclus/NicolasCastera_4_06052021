@@ -132,10 +132,9 @@ function validateDate () {
   const today = new Date().toISOString().split("T")[0];
   let errorBirth = document.getElementById('error-birth');
 
-  console.log(birthdate.value);
   birthdate.max = today;
 
-  if(birthdate.value.trim() === ''){
+  if(birthdate.value.trim() === '' || birthdate.date.value.trim() === ' '){
     errorBirth.style.display='block';
     errorBirth.innerText='Veuillez saisir votre date de naissance'
     birthdate.style.borderColor='red';
@@ -147,7 +146,23 @@ function validateDate () {
   }
 }
 
-//
+//Quantity 
+
+function Quantity () {
+  const quantity = document.getElementById('quantity');
+  const errorQuantity = document.getElementById('error-quantity');
+
+  if(quantity.value.trim() === '' || quantity.value.trim() === 0){
+    errorQuantity.style.display='block';
+    errorQuantity.innerText="Veuillez saisir un nombre d'année"
+    quantity.style.borderColor='red';
+    return false;
+  }else{
+    errorQuantity.style.display='none';
+    quantity.style.borderColor='green';
+    return true;
+  }
+}
 
 
 
@@ -178,6 +193,12 @@ form.addEventListener('submit', e => {
       e.preventDefault();
   }else{
       e.preventDefault();
+  }
+
+  if (Quantity () === false ){
+    e.preventDefault();
+  }else{
+    e.preventDefault();
   }
 });
 

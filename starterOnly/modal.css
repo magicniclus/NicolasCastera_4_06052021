@@ -536,7 +536,7 @@ footer {
   font-size: 0.5em;
 }
 
-#error-birth{
+#error-birth, #error-quantity{
   color:rgb(221, 59, 59);
   font-size: 0.5em;
 }
