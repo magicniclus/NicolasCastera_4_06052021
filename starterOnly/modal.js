@@ -126,7 +126,6 @@ function refutSetUpName (refut) {
 
 //Date
 
-
 function validateDate () {
   const birthdate = document.getElementById('birthdate');
   const today = new Date().toISOString().split("T")[0];
@@ -136,7 +135,7 @@ function validateDate () {
 
   if(birthdate.value.trim() === '' || birthdate.date.value.trim() === ' '){
     errorBirth.style.display='block';
-    errorBirth.innerText='Veuillez saisir votre date de naissance'
+    errorBirth.innerText='Veuillez saisir votre date de naissance';
     birthdate.style.borderColor='red';
     return false;
   }else{
@@ -146,6 +145,8 @@ function validateDate () {
   }
 }
 
+
+
 //Quantity 
 
 function Quantity () {
@@ -154,7 +155,7 @@ function Quantity () {
 
   if(quantity.value.trim() === '' || quantity.value.trim() === 0){
     errorQuantity.style.display='block';
-    errorQuantity.innerText="Veuillez saisir un nombre d'année"
+    errorQuantity.innerText="Veuillez saisir un nombre d'année";
     quantity.style.borderColor='red';
     return false;
   }else{
