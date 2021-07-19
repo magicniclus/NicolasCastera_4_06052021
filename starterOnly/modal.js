@@ -223,7 +223,7 @@ function validateUtilisation (){
   let error = document.getElementById('errorChecked');
 
   if(utilisation.checked === false){
-    error.innerText="Veuiller accepter les conditions d'utilisation";
+    error.innerText="Veuillez accepter les conditions d'utilisation";
     error.style.display= 'block';
     error.style.color='red';
     return false;
@@ -280,6 +280,10 @@ form.addEventListener('submit', e => {
     e.preventDefault();
   }else{
     e.preventDefault();
+  }
+
+  if (validateFirst() === true && validateLast() === true && validateMail () === true && validateDate () === true && validateQuantity () === true && validateCity () === true && validateUtilisation () === true){
+    alert('Alerte rouge en afrique noir');
   }
 });
 
