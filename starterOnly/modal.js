@@ -240,6 +240,10 @@ function validateUtilisation (){
 let form = document.getElementById('form');
 
 form.addEventListener('submit', e => {
+
+  let form = document.getElementById('form');
+
+
     if (validateFirst() === false ){
         e.preventDefault();
     }else{
@@ -283,7 +287,7 @@ form.addEventListener('submit', e => {
   }
 
   if (validateFirst() === true && validateLast() === true && validateMail () === true && validateDate () === true && validateQuantity () === true && validateCity () === true && validateUtilisation () === true){
-    alert('Alerte rouge en afrique noir');
+    form.style.display='none';
   }
 });
 
