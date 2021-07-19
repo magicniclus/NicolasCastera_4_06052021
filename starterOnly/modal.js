@@ -161,11 +161,11 @@ function validateDate () {
 
 //Quantity 
 
-function Quantity () {
+function validateQuantity () {
   const quantity = document.getElementById('quantity');
   const errorQuantity = document.getElementById('error-quantity');
 
-  if(quantity.value.trim() === '' || quantity.value.trim() === 0){
+  if(quantity.value.trim() === '' || quantity.value.trim() == 0){
     errorQuantity.style.display='block';
     errorQuantity.innerText="Veuillez saisir un nombre d'année";
     quantity.style.borderColor='red';
@@ -173,6 +173,62 @@ function Quantity () {
   }else{
     errorQuantity.style.display='none';
     quantity.style.borderColor='green';
+    return true;
+  }
+}
+
+
+
+//CheckBox Ville 
+
+function validateCity () {
+  let location1 = document.getElementById('location1');
+  let location2 = document.getElementById('location2');
+  let location3 = document.getElementById('location3');
+  let location4 = document.getElementById('location4');
+  let location5 = document.getElementById('location5');
+  let location6 = document.getElementById('location6');
+  let checkboxIconUn = document.getElementById('checkbox-icon-1');
+  let checkboxIconDeux = document.getElementById('checkbox-icon-2');
+  let checkboxIconTrois = document.getElementById('checkbox-icon-3');
+  let checkboxIconQuatre = document.getElementById('checkbox-icon-4');
+  let checkboxIconCinq = document.getElementById('checkbox-icon-5');
+  let checkboxIconSix = document.getElementById('checkbox-icon-6');
+
+  if (location1.checked == false && location2.checked == false && location3.checked == false && location4.checked == false && location5.checked == false && location6.checked == false){
+    checkboxIconUn.style.borderColor='red';
+    checkboxIconDeux.style.borderColor='red';
+    checkboxIconTrois.style.borderColor='red';
+    checkboxIconQuatre.style.borderColor='red';
+    checkboxIconCinq.style.borderColor='red';
+    checkboxIconSix.style.borderColor='red';
+    return false;
+  }else{
+    checkboxIconUn.style.borderColor='#279e7a';
+    checkboxIconDeux.style.borderColor='#279e7a';
+    checkboxIconTrois.style.borderColor='#279e7a';
+    checkboxIconQuatre.style.borderColor='#279e7a';
+    checkboxIconCinq.style.borderColor='#279e7a';
+    checkboxIconSix.style.borderColor='#279e7a';
+    return true;
+  };
+}
+
+
+
+//CheckBox Conditions 
+
+function validateUtilisation (){
+  let utilisation = document.getElementById('checkbox1');
+  let error = document.getElementById('errorChecked');
+
+  if(utilisation.checked === false){
+    error.innerText="Veuiller accepter les conditions d'utilisation";
+    error.style.display= 'block';
+    error.style.color='red';
+    return false;
+  }else {
+    error.style.display='none';
     return true;
   }
 }
@@ -208,7 +264,19 @@ form.addEventListener('submit', e => {
       e.preventDefault();
   }
 
-  if (Quantity () === false ){
+  if (validateQuantity () === false ){
+    e.preventDefault();
+  }else{
+    e.preventDefault();
+  }
+
+  if (validateCity () === false){
+    e.preventDefault();
+  }else{
+    e.preventDefault();
+  }
+
+  if (validateUtilisation () === false){
     e.preventDefault();
   }else{
     e.preventDefault();
