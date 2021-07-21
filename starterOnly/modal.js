@@ -295,7 +295,10 @@ form.addEventListener('submit', e => {
     remerciement.style.display='flex';
     document.querySelector('#btn-submit-2').addEventListener('click', function(){
       closeModal();
+      remerciement.style.display='none';
+      form.style.display='block';
     })
+    
   }
 });
 
