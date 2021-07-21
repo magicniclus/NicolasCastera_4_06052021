@@ -531,7 +531,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 850px;
+  height: 27em;
   display: none;
   flex-direction: column;
 }
@@ -539,13 +539,16 @@ footer {
 #remerciement h2 {
 
   text-align: center;
-  font-size: 36px;
-  line-height: 50px;
-  margin-top: 8em;
+  font-size: 2.2em;
+  line-height: 1.5em;
+  margin-top: 2em;
 }
 
 #remerciement #btn-submit-2 {
   margin-top: 50px;
+  width: 11em;
+  height: 3em;
+  padding-bottom: 2em;
 }
 
 

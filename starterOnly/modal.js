@@ -293,11 +293,11 @@ form.addEventListener('submit', e => {
   if (validateFirst() === true && validateLast() === true && validateMail () === true && validateDate () === true && validateQuantity () === true && validateCity () === true && validateUtilisation () === true){
     form.style.display='none';
     remerciement.style.display='flex';
+    document.querySelector('#btn-submit-2').addEventListener('click', function(){
+      closeModal();
+    })
   }
 });
 
-document.querySelector('#btn-submit-2').addEventListener('click', function(){
-  closeModal();
-})
 
 
