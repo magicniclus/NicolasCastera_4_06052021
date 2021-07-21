@@ -181,6 +181,7 @@ function validateQuantity () {
 
 //CheckBox Ville 
 
+
 function validateCity () {
   let location1 = document.getElementById('location1');
   let location2 = document.getElementById('location2');
@@ -237,12 +238,14 @@ function validateUtilisation (){
 
 //Validation formulaire
 
+
 let form = document.getElementById('form');
 
 form.addEventListener('submit', e => {
 
   let form = document.getElementById('form');
-
+  let remerciement = document.getElementById('remerciement');
+  
 
     if (validateFirst() === false ){
         e.preventDefault();
@@ -286,12 +289,15 @@ form.addEventListener('submit', e => {
     e.preventDefault();
   }
 
+
   if (validateFirst() === true && validateLast() === true && validateMail () === true && validateDate () === true && validateQuantity () === true && validateCity () === true && validateUtilisation () === true){
     form.style.display='none';
+    remerciement.style.display='flex';
   }
 });
 
-
-
+document.querySelector('#btn-submit-2').addEventListener('click', function(){
+  closeModal();
+})
 
 

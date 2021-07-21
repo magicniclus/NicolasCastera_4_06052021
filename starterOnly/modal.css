@@ -527,6 +527,28 @@ footer {
   }
 }
 
+#remerciement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 850px;
+  display: none;
+  flex-direction: column;
+}
+
+#remerciement h2 {
+
+  text-align: center;
+  font-size: 36px;
+  line-height: 50px;
+  margin-top: 8em;
+}
+
+#remerciement #btn-submit-2 {
+  margin-top: 50px;
+}
+
+
 /*--    Error    --*/
 
 /* Prenom */
