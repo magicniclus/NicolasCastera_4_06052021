@@ -59,7 +59,7 @@ function validateSetUpName (validate) {
 }
 
 function refutSetUpName (refut) {
-  refut.style.borderColor='red';
+  refut.style.borderColor='rgb(221, 59, 59)';
 }
 
 
@@ -89,7 +89,7 @@ function validateSetUpName (validate) {
 }
 
 function refutSetUpName (refut) {
-  refut.style.borderColor='red';
+  refut.style.borderColor='rgb(221, 59, 59)';
 }
 
 
@@ -119,7 +119,7 @@ function validateSetUpName (validate) {
 }
 
 function refutSetUpName (refut) {
-  refut.style.borderColor='red';
+  refut.style.borderColor='rgb(221, 59, 59)';
 }
 
 
@@ -148,7 +148,7 @@ function validateDate () {
   if(birthdate.value.trim() === ''){
     errorBirth.style.display='block';
     errorBirth.innerText='Veuillez saisir votre date de naissance';
-    birthdate.style.borderColor='red';
+    birthdate.style.borderColor='rgb(221, 59, 59)';
     return false;
   }else{
     errorBirth.style.display='none';
@@ -168,7 +168,7 @@ function validateQuantity () {
   if(quantity.value.trim() === '' || quantity.value.trim() == 0){
     errorQuantity.style.display='block';
     errorQuantity.innerText="Veuillez saisir un nombre d'année";
-    quantity.style.borderColor='red';
+    quantity.style.borderColor='rgb(221, 59, 59)';
     return false;
   }else{
     errorQuantity.style.display='none';
@@ -195,14 +195,17 @@ function validateCity () {
   let checkboxIconQuatre = document.getElementById('checkbox-icon-4');
   let checkboxIconCinq = document.getElementById('checkbox-icon-5');
   let checkboxIconSix = document.getElementById('checkbox-icon-6');
+  let errorCity = document.getElementById('error-city');
 
   if (location1.checked == false && location2.checked == false && location3.checked == false && location4.checked == false && location5.checked == false && location6.checked == false){
-    checkboxIconUn.style.borderColor='red';
-    checkboxIconDeux.style.borderColor='red';
-    checkboxIconTrois.style.borderColor='red';
-    checkboxIconQuatre.style.borderColor='red';
-    checkboxIconCinq.style.borderColor='red';
-    checkboxIconSix.style.borderColor='red';
+    checkboxIconUn.style.borderColor='rgb(221, 59, 59)';
+    checkboxIconDeux.style.borderColor='rgb(221, 59, 59)';
+    checkboxIconTrois.style.borderColor='rgb(221, 59, 59)';
+    checkboxIconQuatre.style.borderColor='rgb(221, 59, 59)';
+    checkboxIconCinq.style.borderColor='rgb(221, 59, 59)';
+    checkboxIconSix.style.borderColor='rgb(221, 59, 59)';
+    errorCity.style.display='block';
+    errorCity.innerText='Veuillez cocher au moins une ville';
     return false;
   }else{
     checkboxIconUn.style.borderColor='#279e7a';
@@ -211,6 +214,7 @@ function validateCity () {
     checkboxIconQuatre.style.borderColor='#279e7a';
     checkboxIconCinq.style.borderColor='#279e7a';
     checkboxIconSix.style.borderColor='#279e7a';
+    errorCity.style.display='none';
     return true;
   };
 }

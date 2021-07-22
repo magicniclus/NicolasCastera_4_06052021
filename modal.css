@@ -564,7 +564,7 @@ footer {
 
 /* Prenom */
 
-#error, #error-last, #error-email {
+#error, #error-last, #error-email, #error-city {
   color: rgb(221, 59, 59);
   font-size: 0.5em;
 }
@@ -572,4 +572,8 @@ footer {
 #error-birth, #error-quantity{
   color:rgb(221, 59, 59);
   font-size: 0.5em;
+}
+
+#error-city {
+  margin-bottom: 0.5em;
 }
