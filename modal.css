@@ -183,6 +183,12 @@ main {
   padding-top: 10px;
 }
 
+@media screen and (max-width: 425px) {
+  .content{
+    margin-top: 4em;
+  }
+}
+
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
