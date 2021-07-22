@@ -549,6 +549,8 @@ footer {
   width: 11em;
   height: 3em;
   padding-bottom: 2em;
+  border: none;
+  outline: none;
 }
 
 

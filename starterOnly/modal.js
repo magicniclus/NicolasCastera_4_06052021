@@ -298,6 +298,11 @@ form.addEventListener('submit', e => {
       remerciement.style.display='none';
       form.style.display='block';
     })
+    document.querySelector('.close').addEventListener('click', function(){
+      closeModal();
+      remerciement.style.display='none';
+      form.style.display='block';
+    })
     
   }
 });
