@@ -230,7 +230,7 @@ function validateUtilisation (){
   if(utilisation.checked === false){
     error.innerText="Veuillez accepter les conditions d'utilisation";
     error.style.display= 'block';
-    error.style.color='red';
+    error.style.color='rgb(221, 59, 59)';
     return false;
   }else {
     error.style.display='none';
