@@ -40,6 +40,8 @@ img {
 .main-navbar {
     float: right;
 }
+
+
 .topnav a {
   float: left;
   display: block;
@@ -97,7 +99,20 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
+    margin-top: 10px;
+    color: red;
+  }
+
+  .topnav a.icon:hover {
+    float: right;
+    display: block;
+    margin-top: 0px;
+    color: white;
+  }
+
+  img {
+    width: 10em;
+    margin-top: 1em;
   }
 } 
 
@@ -521,6 +536,21 @@ footer {
   .copyrights {
     margin-top: 50px;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-headline {
+    font-size: 2em;
+  }
+
+  .hero-text {
+    font-size: 0.7em;
+    margin-top: 2em;
+}
+
+  .hero-content {
+    padding: 0;
   }
 }
 
