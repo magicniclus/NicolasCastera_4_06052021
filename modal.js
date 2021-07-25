@@ -13,6 +13,8 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelectorAll(".close");
 const enterPrenom = document.getElementsByClassName ('penom');
+const sectionUn = document.getElementById ('sectionUn');
+const contentUn = document.getElementById ('contentUn')
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -20,6 +22,8 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal event
 function launchModal() {
   modalbg.style.display = "block";
+  sectionUn.classList.add('borderNoneHero');
+  contentUn.classList.add('borderNoneContent');
 }
 
 // close modal event
@@ -31,6 +35,9 @@ closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
 function closeModal() {
   modalbg.style.display = "none";
+  sectionUn.classList.remove('borderNoneHero');
+  contentUn.classList.remove('borderNoneContent');
+  
 }
 
 

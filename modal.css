@@ -541,7 +541,7 @@ footer {
 
 @media screen and (max-width: 500px) {
   .hero-headline {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .hero-text {
@@ -551,6 +551,19 @@ footer {
 
   .hero-content {
     padding: 0;
+    min-width: 0;
+  }
+
+  .hero-section {
+    min-height: 0;
+  }
+
+  .copyrights{
+    margin-top: 0;
+  }
+
+  .header-logo img {
+    margin-left: 10px;
   }
 }
 
@@ -568,7 +581,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 27em;
+  min-height: 27em;
   display: none;
   flex-direction: column;
 }
@@ -588,6 +601,16 @@ footer {
   padding-bottom: 2em;
   border: none;
   outline: none;
+}
+
+@media screen and (max-width: 500px){
+  .borderNoneContent {
+    margin: 23% 0 0 0;
+  }
+
+  .borderNoneHero {
+    display: none;
+  }
 }
 
 
