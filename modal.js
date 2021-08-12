@@ -136,21 +136,7 @@ function refutSetUpName (refut) {
 
 function validateDate () {
   const birthdate = document.getElementById('birthdate');
-  // const today = new Date().toISOString().split("T")[0]; //enlever
   let errorBirth = document.getElementById('error-birth');
-
-  // birthdate.max = today;
-
-  // if(birthdate.value.trim() === '' || birthdate.date.value.trim() === ' '){
-  //   errorBirth.style.display='block';
-  //   errorBirth.innerText='Veuillez saisir votre date de naissance';
-  //   birthdate.style.borderColor='red';
-  //   return false;
-  // }else{
-  //   errorBirth.style.display='none';
-  //   birthdate.style.borderColor='green';
-  //   return true;
-  // }
 
   if(birthdate.value.trim() === ''){
     errorBirth.style.display='block';
@@ -258,6 +244,8 @@ form.addEventListener('submit', e => {
   let remerciement = document.getElementById('remerciement');
   
 
+  //Mise à défault du formulaire 
+
     if (validateFirst() === false ){
         e.preventDefault();
     }else{
@@ -278,28 +266,30 @@ form.addEventListener('submit', e => {
 
     if (validateDate () === false ){
       e.preventDefault();
-  }else{
+    }else{
       e.preventDefault();
-  }
+    }
 
-  if (validateQuantity () === false ){
-    e.preventDefault();
-  }else{
-    e.preventDefault();
-  }
+    if (validateQuantity () === false ){
+     e.preventDefault();
+    }else{
+     e.preventDefault();
+   }
 
-  if (validateCity () === false){
-    e.preventDefault();
-  }else{
-    e.preventDefault();
-  }
+    if (validateCity () === false){
+     e.preventDefault();
+    }else{
+     e.preventDefault();
+    }
 
-  if (validateUtilisation () === false){
-    e.preventDefault();
-  }else{
-    e.preventDefault();
-  }
+    if (validateUtilisation () === false){
+     e.preventDefault();
+    }else{
+     e.preventDefault();
+    }
 
+
+    //Condition de validation du formulaire
 
   if (validateFirst() === true && validateLast() === true && validateMail () === true && validateDate () === true && validateQuantity () === true && validateCity () === true && validateUtilisation () === true){
     form.style.display='none';
